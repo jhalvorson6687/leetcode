@@ -23,12 +23,18 @@ namespace LeetCode
             {
                 case "MajorityElement":
                     int[] nums = {1,2,3,1,2,3,1,2,3,1,2,3,1};
-                    solution.MajorityElement(nums);
+                    Console.WriteLine(solution.MajorityElement(nums));
                     break;
 
                 case "MaxProfit":
                     int[] prices = { 7, 1, 5, 3, 6, 4 };
-                    solution.MaxProfit(prices);
+                    Console.WriteLine(solution.MaxProfit(prices));
+                    break;
+
+                case "PrefixesDivBy5":
+                    int[] binaryNums = { 0,1,1 };
+                    var result = solution.PrefixesDivBy5(binaryNums);
+                    Console.WriteLine(string.Join(", ", result));
                     break;
 
                 default:

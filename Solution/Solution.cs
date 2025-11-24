@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
 
 namespace CSharp_leetcode.Solution
@@ -47,9 +48,24 @@ namespace CSharp_leetcode.Solution
                 j--;
                 i++;
             }
-            Console.WriteLine(sell + " " + buy);
+            // Console.WriteLine(sell + " " + buy);
             max = prices[sell] - prices[buy];
             return max > 0 ? max : 0;
+        }
+    
+        public IList<bool> PrefixesDivBy5(int[] nums) {
+            List<bool> divBy5 = new List<bool>(nums.Length);
+            BigInteger runningTotal = 0;
+            for (var i = 0; i < nums.Length; i++) {
+                runningTotal *= 2;
+                if (nums[i] > 0)
+                {
+                    runningTotal += 1;
+                }
+                divBy5.Add((runningTotal % 5) == 0);
+            }
+
+            return divBy5;
         }
     }
 }
