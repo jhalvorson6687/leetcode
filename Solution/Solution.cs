@@ -58,7 +58,7 @@ namespace CSharp_leetcode.Solution
             List<bool> divBy5 = new List<bool>(nums.Length);
             BigInteger runningTotal = 0;
             for (var i = 0; i < nums.Length; i++) {
-                runningTotal *= 2;
+                runningTotal *= 2;  // runningTotal = runningTotal << 1; can also store remainder only to avoid large number calculations
                 if (nums[i] > 0)
                 {
                     runningTotal += 1;
