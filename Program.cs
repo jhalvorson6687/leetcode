@@ -37,6 +37,12 @@ namespace LeetCode
                     Console.WriteLine(string.Join(", ", result));
                     break;
 
+                case "WordPattern":
+                    string pattern = "abba";
+                    string s = "dog cat cat dog";
+                    Console.WriteLine(solution.WordPattern(pattern, s));
+                    break;
+
                 default:
                     Console.WriteLine("Solution not found for the given argument.");
                     break;
