@@ -52,7 +52,8 @@ namespace CSharp_leetcode.Solution
             max = prices[sell] - prices[buy];
             return max > 0 ? max : 0;
         }
-    
+
+        /* Can be more efficient by using modulo properties to avoid large number calculations. Also bit shift left 1 to multiply by 2. */
         public IList<bool> PrefixesDivBy5(int[] nums) {
             List<bool> divBy5 = new List<bool>(nums.Length);
             BigInteger runningTotal = 0;
