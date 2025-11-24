@@ -1,0 +1,6 @@
+*obj/
+obj/
+test.exe
+env/
+*bin/
+bin/
