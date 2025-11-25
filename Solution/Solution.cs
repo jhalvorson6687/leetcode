@@ -122,5 +122,18 @@ namespace CSharp_leetcode.Solution
 
             return true;
         }
+    
+        public int[] TwoSum(int[] nums, int target) {
+            var d = new Dictionary<int, int>();
+            int diff;
+            for (var i = 0; i< nums.Length; i++) {
+                diff = target - nums[i];
+                if (d.TryGetValue(nums[i], out var value)) {
+                    return new int[] {d[nums[i]], i};
+                }
+                d[diff] = i;
+            }
+            return new int[0];
+        }
     }
 }

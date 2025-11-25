@@ -44,6 +44,13 @@ namespace LeetCode
                     Console.WriteLine(solution.IsAnagram(s1, s2));
                     break;
 
+                case "TwoSum":
+                    int[] numbers = { 2,7,11,15 };
+                    int target = 9;
+                    var indices = solution.TwoSum(numbers, target);
+                    Console.WriteLine($"[{indices[0]}, {indices[1]}]");
+                    break;
+
                 default:
                     Console.WriteLine("Solution not found for the given argument.");
                     break;
