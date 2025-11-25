@@ -42,17 +42,18 @@ class Program
 
     static IEnumerable<ILeetCodeProblem> GetAllProblems()
     {
-        // This could be automated with reflection, but keeping it simple for now
-        return new ILeetCodeProblem[]
-        {
-            new TwoSum(),
-            new MaxProfit(),
-            new MajorityElement(),
-            new IsHappy(),
-            new IsAnagram(),
-            new WordPattern(),
-            new PrefixesDivBy5()
-        };
+        // Automatically discover all ILeetCodeProblem implementations using reflection
+        var assembly = typeof(ILeetCodeProblem).Assembly;
+        
+        var problemTypes = assembly.GetTypes()
+            .Where(t => typeof(ILeetCodeProblem).IsAssignableFrom(t) 
+                        && !t.IsInterface 
+                        && !t.IsAbstract
+                        && t.GetConstructor(Type.EmptyTypes) != null);
+        
+        return problemTypes
+            .Select(t => (ILeetCodeProblem)Activator.CreateInstance(t)!)
+            .ToList();
     }
 }
 
