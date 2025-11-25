@@ -11,8 +11,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("LeetCode Solutions - C#");
-        Console.WriteLine("========================\n");
+        Console.WriteLine("\nLeetCode Solutions - C#");
+        Console.WriteLine("========================");
         Console.WriteLine("To run all tests, use: dotnet test");
         Console.WriteLine("To run tests for a specific problem, use: dotnet test --filter <ProblemName>");
         Console.WriteLine("To run tests for a specific difficulty, use: dotnet test --filter FullyQualifiedName~Easy/Medium/Hard");
@@ -25,7 +25,7 @@ class Program
             Console.WriteLine($"#{problem.ProblemNumber} - {problem.Title} ({problem.Level})");
         }
 
-        Console.WriteLine("\n--- Example Solutions ---\n");
+        Console.WriteLine("\n--- Example Solutions ---");
 
         // Quick example - Two Sum
         var twoSum = new TwoSum();

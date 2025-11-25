@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CSharp_leetcode.Tests.Easy;
 
-public class ContainsNearbyDuplicatesTests
+public class ContainsNearbyDuplicateTests
 {
-    private readonly ContainsNearbyDuplicates _solution;
+    private readonly ContainsNearbyDuplicate _solution;
 
-    public ContainsNearbyDuplicatesTests()
+    public ContainsNearbyDuplicateTests()
     {
-        _solution = new ContainsNearbyDuplicates();
+        _solution = new ContainsNearbyDuplicate();
     }
 
     [Fact]

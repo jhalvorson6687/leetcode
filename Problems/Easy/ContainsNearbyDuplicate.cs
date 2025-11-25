@@ -6,7 +6,7 @@ namespace CSharp_leetcode.Problems.Easy;
 /// Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array 
 /// such that nums[i] == nums[j] and abs(i - j) <= k.
 /// </summary>
-public class ContainsNearbyDuplicates : ILeetCodeProblem
+public class ContainsNearbyDuplicate : ILeetCodeProblem
 {
     public int ProblemNumber => 219;
     public string Title => "Contains Nearby Duplicate II";
@@ -14,6 +14,18 @@ public class ContainsNearbyDuplicates : ILeetCodeProblem
 
     public bool Solve(int[] nums, int k)
     {
-        return true;
+        var d = new Dictionary<int, int>();
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (d.TryGetValue(nums[i], out var value))
+            {
+                if (i - value <= k)
+                {
+                    return true;
+                }
+            }
+            d[nums[i]] = i;
+        }
+        return false;
     }
 }
