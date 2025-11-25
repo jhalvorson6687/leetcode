@@ -125,12 +125,13 @@ This will display all problems with their metadata (number, title, difficulty).
 
 ## Current Solutions
 
-### Easy (7 problems)
+### Easy (8 problems)
 
 - **#1** - Two Sum
 - **#121** - Best Time to Buy and Sell Stock
 - **#169** - Majority Element
 - **#202** - Happy Number
+- **#219** - Contains Nearby Duplicate II
 - **#242** - Valid Anagram
 - **#290** - Word Pattern
 - **#1018** - Binary Prefix Divisible By 5
