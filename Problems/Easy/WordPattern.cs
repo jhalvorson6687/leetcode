@@ -6,8 +6,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// Given a pattern and a string s, find if s follows the same pattern.
 /// Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
 /// </summary>
-public class WordPattern
+public class WordPattern : ILeetCodeProblem
 {
+    public int ProblemNumber => 290;
+    public string Title => "Word Pattern";
+    public Difficulty Level => Difficulty.Easy;
+
     public bool Solve(string pattern, string s)
     {
         var map1 = new Dictionary<char, string>();

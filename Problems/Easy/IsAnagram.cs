@@ -6,8 +6,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 /// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase.
 /// </summary>
-public class IsAnagram
+public class IsAnagram : ILeetCodeProblem
 {
+    public int ProblemNumber => 242;
+    public string Title => "Valid Anagram";
+    public Difficulty Level => Difficulty.Easy;
+
     public bool Solve(string s, string t)
     {
         if (s.Length != t.Length) return false;

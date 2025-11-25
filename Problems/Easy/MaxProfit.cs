@@ -6,8 +6,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 /// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 /// </summary>
-public class MaxProfit
+public class MaxProfit : ILeetCodeProblem
 {
+    public int ProblemNumber => 121;
+    public string Title => "Best Time to Buy and Sell Stock";
+    public Difficulty Level => Difficulty.Easy;
+
     public int Solve(int[] prices)
     {
         if (prices.Length < 2) return 0;

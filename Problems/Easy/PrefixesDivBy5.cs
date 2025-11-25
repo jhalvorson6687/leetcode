@@ -8,8 +8,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// You are given a binary array nums (0-indexed).
 /// Return an array of booleans answer, where answer[i] is true if the number formed by the binary prefix ending at i is divisible by 5.
 /// </summary>
-public class PrefixesDivBy5
+public class PrefixesDivBy5 : ILeetCodeProblem
 {
+    public int ProblemNumber => 1018;
+    public string Title => "Binary Prefix Divisible By 5";
+    public Difficulty Level => Difficulty.Easy;
+
     public IList<bool> Solve(int[] nums)
     {
         List<bool> divBy5 = new List<bool>(nums.Length);

@@ -5,8 +5,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// Difficulty: Easy
 /// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 /// </summary>
-public class TwoSum
+public class TwoSum : ILeetCodeProblem
 {
+    public int ProblemNumber => 1;
+    public string Title => "Two Sum";
+    public Difficulty Level => Difficulty.Easy;
+
     public int[] Solve(int[] nums, int target)
     {
         var d = new Dictionary<int, int>();

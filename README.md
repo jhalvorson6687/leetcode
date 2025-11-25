@@ -7,6 +7,7 @@ A well-organized collection of LeetCode problem solutions with comprehensive uni
 ```
 CSharp_leetcode/
 ├── Problems/
+│   ├── ILeetCodeProblem.cs # Interface with problem metadata
 │   ├── Easy/               # Easy difficulty problems
 │   │   ├── TwoSum.cs
 │   │   ├── MajorityElement.cs
@@ -24,7 +25,7 @@ CSharp_leetcode/
 │   │   └── ...
 │   ├── Medium/
 │   └── Hard/
-├── Program.cs              # Quick test examples
+├── Program.cs              # Quick test examples & problem listing
 └── leetcode.csproj
 ```
 
@@ -50,6 +51,14 @@ dotnet test --filter FullyQualifiedName~Easy
 dotnet test --filter FullyQualifiedName~Medium
 ```
 
+### Listing All Problems
+
+```bash
+dotnet run
+```
+
+This will display all problems with their metadata (number, title, difficulty).
+
 ### Adding a New Problem
 
 1. **Create the problem file** in the appropriate difficulty folder:
@@ -62,8 +71,12 @@ dotnet test --filter FullyQualifiedName~Medium
    /// Difficulty: Easy
    /// Problem description here
    /// </summary>
-   public class ProblemName
+   public class ProblemName : ILeetCodeProblem
    {
+       public int ProblemNumber => XXX;
+       public string Title => "Problem Name";
+       public Difficulty Level => Difficulty.Easy;
+
        public ReturnType Solve(ParameterType param)
        {
            // Your solution here
@@ -121,14 +134,31 @@ dotnet test --filter FullyQualifiedName~Medium
 - **#290** - Word Pattern
 - **#1018** - Binary Prefix Divisible By 5
 
-## Benefits of This Structure
+## Key Features
+
+### Interface-Based Design
+
+All problems implement `ILeetCodeProblem` which provides:
+
+- **Problem Number** - LeetCode problem ID
+- **Title** - Problem name
+- **Difficulty Level** - Easy, Medium, or Hard
+
+This enables programmatic access to problem metadata, making it easy to:
+
+- List all available problems
+- Filter by difficulty
+- Build tools and utilities around your solutions
+
+### Benefits of This Structure
 
 ✅ **Isolated Solutions** - Each problem in its own file for easy navigation  
 ✅ **Comprehensive Tests** - Multiple test cases per problem with xUnit  
 ✅ **Easy to Extend** - Clear pattern for adding new problems  
 ✅ **Professional Structure** - Organized by difficulty level  
 ✅ **Quick Verification** - Run all tests or filter by problem/difficulty  
-✅ **Documentation** - XML comments with problem descriptions
+✅ **Documentation** - XML comments with problem descriptions  
+✅ **Metadata-Driven** - Interface provides problem info at runtime
 
 ## Technologies
 

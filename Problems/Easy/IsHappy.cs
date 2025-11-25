@@ -8,8 +8,12 @@ namespace CSharp_leetcode.Problems.Easy;
 /// Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
 /// Those numbers for which this process ends in 1 are happy.
 /// </summary>
-public class IsHappy
+public class IsHappy : ILeetCodeProblem
 {
+    public int ProblemNumber => 202;
+    public string Title => "Happy Number";
+    public Difficulty Level => Difficulty.Easy;
+
     public bool Solve(int n)
     {
         var seen = new HashSet<int>();
