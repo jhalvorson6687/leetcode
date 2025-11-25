@@ -49,6 +49,7 @@ dotnet test --filter MajorityElementTests
 ```bash
 dotnet test --filter FullyQualifiedName~Easy
 dotnet test --filter FullyQualifiedName~Medium
+dotnet test --filter FullyQualifiedName~Hard
 ```
 
 ### Listing All Problems
