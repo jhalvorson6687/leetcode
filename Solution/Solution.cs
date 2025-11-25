@@ -94,5 +94,37 @@ namespace CSharp_leetcode.Solution
 
             return true;
         }
+    
+        public bool IsAnagram(string s, string t) {
+            if (s.Length != t.Length) return false;
+            
+            var map = new Dictionary<char, int>();
+            foreach (var c in s)
+            {
+                if (map.TryGetValue(c, out int value))
+                {
+                    map[c] = value + 1;
+                }
+                else 
+                {
+                    map.Add(c, 1);
+                }
+            }
+
+            foreach (var c in t)
+            {
+                if (map.TryGetValue(c, out int value))
+                {
+                    map[c] = value - 1;
+                    if (map[c] < 0) return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

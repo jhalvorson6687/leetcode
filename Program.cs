@@ -43,6 +43,12 @@ namespace LeetCode
                     Console.WriteLine(solution.WordPattern(pattern, s));
                     break;
 
+                case "IsAnagram":
+                    string s1 = "anagram";
+                    string s2 = "nagaram";
+                    Console.WriteLine(solution.IsAnagram(s1, s2));
+                    break;
+
                 default:
                     Console.WriteLine("Solution not found for the given argument.");
                     break;
