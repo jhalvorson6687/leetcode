@@ -20,7 +20,7 @@ public class TwoSum : ILeetCodeProblem
             diff = target - nums[i];
             if (d.TryGetValue(nums[i], out var value))
             {
-                return new int[] { d[nums[i]], i };
+                return new int[] { value, i };
             }
             d[diff] = i;
         }
