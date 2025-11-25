@@ -24,6 +24,6 @@ public class TwoSum : ILeetCodeProblem
             }
             d[diff] = i;
         }
-        return new int[0];
+        return Array.Empty<int>();
     }
 }
