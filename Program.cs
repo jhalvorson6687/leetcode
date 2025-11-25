@@ -51,6 +51,11 @@ namespace LeetCode
                     Console.WriteLine($"[{indices[0]}, {indices[1]}]");
                     break;
 
+                case "IsHappy":
+                    int n = 19;
+                    Console.WriteLine(solution.IsHappy(n));
+                    break;
+
                 default:
                     Console.WriteLine("Solution not found for the given argument.");
                     break;
