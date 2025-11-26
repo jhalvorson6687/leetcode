@@ -60,6 +60,20 @@ dotnet run
 
 This will display all problems with their metadata (number, title, difficulty).
 
+### Auto-Update README
+
+After adding a new problem, automatically update the "Current Solutions" section in this README:
+
+```bash
+dotnet run -- --update-readme
+```
+
+This will:
+
+- Discover all problems using reflection
+- Count problems by difficulty
+- Update the Current Solutions section with the latest list
+
 ### Adding a New Problem
 
 1. **Create the problem file** in the appropriate difficulty folder:
