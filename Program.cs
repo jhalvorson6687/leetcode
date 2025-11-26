@@ -114,7 +114,7 @@ class Program
                        + readmeContent.Substring(endIndex);
 
         File.WriteAllText(readmePath, newContent);
-        Console.WriteLine("✅ README.md updated successfully!");
+        Console.WriteLine("[OK] README.md updated successfully!");
         Console.WriteLine($"Total problems: {problems.Count()}");
     }
 }
