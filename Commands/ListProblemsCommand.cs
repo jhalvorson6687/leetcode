@@ -22,6 +22,7 @@ public class ListProblemsCommand : ICommand
         var problems = _problemDiscovery.GetAllProblems();
         foreach (var problem in problems.OrderBy(p => p.ProblemNumber))
         {
+            Console.Write($"#{problem.ProblemNumber} - {problem.Title} ");
             Console.ForegroundColor = problem.Level switch
             {
                 Difficulty.Easy => ConsoleColor.Green,
@@ -29,7 +30,9 @@ public class ListProblemsCommand : ICommand
                 Difficulty.Hard => ConsoleColor.Red,
                 _ => ConsoleColor.White
             };
-            Console.WriteLine($"#{problem.ProblemNumber} - {problem.Title} ({problem.Level})");
+            Console.Write($"({problem.Level})");
+            Console.ResetColor();
+            Console.WriteLine();
         }
 
         Console.ResetColor();
