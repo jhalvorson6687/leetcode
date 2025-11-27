@@ -23,7 +23,7 @@ public class FindMedianTests
 
         // Assert
         // TODO: Add assertions
-        Assert.True(false, "Test not implemented");
+        Assert.Fail("Test not implemented");
     }
 
     [Fact]
@@ -37,6 +37,6 @@ public class FindMedianTests
 
         // Assert
         // TODO: Add assertions
-        Assert.True(false, "Test not implemented");
+        Assert.Fail("Test not implemented");
     }
 }

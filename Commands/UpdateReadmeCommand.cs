@@ -65,7 +65,11 @@ public class UpdateReadmeCommand : ICommand
                        + readmeContent.Substring(endIndex);
 
         File.WriteAllText(readmePath, newContent);
-        Console.WriteLine("[OK] README.md updated successfully!");
+        
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write("[OK]");
+        Console.ResetColor();
+        Console.WriteLine(" README.md updated successfully!");
         Console.WriteLine($"Total problems: {problems.Count()}");
     }
 }

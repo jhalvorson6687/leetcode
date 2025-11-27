@@ -1,3 +1,4 @@
+using CSharp_leetcode.Problems;
 using CSharp_leetcode.Problems.Easy;
 using CSharp_leetcode.Services;
 
@@ -21,9 +22,17 @@ public class ListProblemsCommand : ICommand
         var problems = _problemDiscovery.GetAllProblems();
         foreach (var problem in problems.OrderBy(p => p.ProblemNumber))
         {
+            Console.ForegroundColor = problem.Level switch
+            {
+                Difficulty.Easy => ConsoleColor.Green,
+                Difficulty.Medium => ConsoleColor.Yellow,
+                Difficulty.Hard => ConsoleColor.Red,
+                _ => ConsoleColor.White
+            };
             Console.WriteLine($"#{problem.ProblemNumber} - {problem.Title} ({problem.Level})");
         }
 
+        Console.ResetColor();
         Console.WriteLine("\n--- Example Solutions ---");
 
         // Quick example - Two Sum
