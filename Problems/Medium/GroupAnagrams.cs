@@ -31,6 +31,6 @@ public class GroupAnagram : ILeetCodeProblem
             }
         }
 
-        return map.Values.Select(v => (IList<string>)v).ToList();
+        return [.. map.Values];
     }
 }
