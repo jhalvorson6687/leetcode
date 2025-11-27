@@ -250,9 +250,9 @@ This enables programmatic access to problem metadata, making it easy to:
 
 ## Technologies
 
-- .NET 7.0
+- .NET 10.0
+- C# 14
 - xUnit Testing Framework
-- C# 11
 
 ## VS Code Integration
 
