@@ -14,7 +14,23 @@ public class GroupAnagram : ILeetCodeProblem
 
     public IList<IList<string>> Solve(string[] strs)
     {
-        // TODO: Implement solution
-        throw new NotImplementedException();
+        //["eat","tea","tan","ate","nat","bat"]
+        var map = new Dictionary<string, List<string>>();
+        foreach (var str in strs)
+        {
+            var charArray = str.ToCharArray();
+            Array.Sort(charArray);
+            var key = new string(charArray);
+            if (map.TryGetValue(key, out var list))
+            {
+                list.Add(str);
+            }
+            else
+            {
+                map.Add(key, [str]);
+            }
+        }
+
+        return map.Values.Select(v => (IList<string>)v).ToList();
     }
 }

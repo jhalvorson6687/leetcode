@@ -29,7 +29,6 @@ public class GroupAnagramTests
             new List<string> { "bat" }
         };
         Assert.Equal(expected.Count, result.Count);
-        // Additional assertions can be added to compare the contents of each group
     }
 
     [Fact]
