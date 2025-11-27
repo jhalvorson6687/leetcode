@@ -1,6 +1,6 @@
 # LeetCode Solutions - C#
 
-A practice repository for solving LeetCode problems in C# while learning software design patterns and best practices.
+A well-organized collection of LeetCode problem solutions with comprehensive unit tests.
 
 ## About This Project
 
