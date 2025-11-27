@@ -1,6 +1,18 @@
 # LeetCode Solutions - C#
 
-A well-organized collection of LeetCode problem solutions with comprehensive unit tests.
+A practice repository for solving LeetCode problems in C# while learning software design patterns and best practices.
+
+## About This Project
+
+This project serves multiple learning objectives:
+
+- **Algorithm Practice**: Solving LeetCode problems to improve problem-solving skills and prepare for technical interviews
+- **Design Patterns**: Implementing real-world design patterns (Command, Strategy, Factory, Service Layer) in a practical context
+- **Test-Driven Development**: Writing comprehensive unit tests using xUnit to ensure solution correctness
+- **Clean Architecture**: Organizing code with clear separation of concerns and maintainable structure
+- **Developer Tooling**: Building CLI tools and automation to streamline the development workflow
+
+The project goes beyond simple problem-solving by creating a well-architected system with automated scaffolding, reflection-based discovery, and command-line utilities.
 
 ## Project Structure
 
