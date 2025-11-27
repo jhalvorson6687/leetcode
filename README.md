@@ -6,16 +6,21 @@ A well-organized collection of LeetCode problem solutions with comprehensive uni
 
 ```
 CSharp_leetcode/
+├── Commands/               # Command pattern implementations
+│   ├── ICommand.cs         # Command interface
+│   ├── HelpCommand.cs               # Default: show usage instructions
+│   ├── ListProblemsCommand.cs       # --list-problems: list all problems
+│   ├── UpdateReadmeCommand.cs       # --update-readme
+│   └── GenerateTemplateCommand.cs   # --new
+├── Services/               # Reusable business logic
+│   ├── ProblemDiscovery.cs          # Reflection-based problem discovery
+│   └── TemplateGenerator.cs         # Code generation for new problems
 ├── Problems/
 │   ├── ILeetCodeProblem.cs # Interface with problem metadata
 │   ├── Easy/               # Easy difficulty problems
 │   │   ├── TwoSum.cs
 │   │   ├── MajorityElement.cs
-│   │   ├── MaxProfit.cs
-│   │   ├── IsAnagram.cs
-│   │   ├── IsHappy.cs
-│   │   ├── WordPattern.cs
-│   │   └── PrefixesDivBy5.cs
+│   │   └── ...
 │   ├── Medium/             # Medium difficulty problems
 │   └── Hard/               # Hard difficulty problems
 ├── Tests/
@@ -25,11 +30,27 @@ CSharp_leetcode/
 │   │   └── ...
 │   ├── Medium/
 │   └── Hard/
-├── Program.cs              # Quick test examples & problem listing
+├── Program.cs              # Entry point & command routing
 └── leetcode.csproj
 ```
 
 ## How to Use
+
+### Show Help
+
+```bash
+dotnet run
+```
+
+Displays all available commands and testing instructions.
+
+### Listing All Problems
+
+```bash
+dotnet run -- --list-problems
+```
+
+This will display all problems with their metadata (number, title, difficulty) and show example solutions.
 
 ### Running All Tests
 
@@ -52,13 +73,30 @@ dotnet test --filter FullyQualifiedName~Medium
 dotnet test --filter FullyQualifiedName~Hard
 ```
 
-### Listing All Problems
+### Generate New Problem Template
+
+Quickly scaffold a new problem with boilerplate code:
 
 ```bash
-dotnet run
+dotnet run -- --new <ClassName> <Difficulty> <ProblemNumber> ["Problem Title"]
 ```
 
-This will display all problems with their metadata (number, title, difficulty).
+**Examples:**
+
+```bash
+# Create a Medium problem
+dotnet run -- --new TwoPointers Medium 167 "Two Sum II"
+
+# Create an Easy problem (title defaults to class name if not provided)
+dotnet run -- --new ValidParentheses Easy 20
+```
+
+This will:
+
+- Create `Problems/{Difficulty}/{ClassName}.cs` with ILeetCodeProblem implementation
+- Create `Tests/{Difficulty}/{ClassName}Tests.cs` with xUnit test template
+- Include TODO comments for easy filling
+- Problem automatically appears in the problems list
 
 ### Auto-Update README
 
@@ -150,7 +188,29 @@ This will:
 - **#290** - Word Pattern
 - **#1018** - Binary Prefix Divisible By 5
 
+### Medium (1 problems)
+
+- **#49** - Group Anagrams
+
+### Hard (1 problems)
+
+- **#4** - Median of Two Sorted Arrays
+
 ## Key Features
+
+### Clean Architecture
+
+The project follows the **Command Pattern** with separated concerns:
+
+- **Commands/** - Each CLI feature is a separate command (Single Responsibility)
+- **Services/** - Reusable business logic shared across commands
+- **Program.cs** - Simple command routing
+
+This architecture makes it easy to:
+
+- Add new features without modifying existing code
+- Test individual components
+- Understand what each part does
 
 ### Interface-Based Design
 
