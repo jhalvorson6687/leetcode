@@ -240,13 +240,13 @@ This enables programmatic access to problem metadata, making it easy to:
 
 ### Benefits of This Structure
 
-**Isolated Solutions** - Each problem in its own file for easy navigation
-**Comprehensive Tests** - Multiple test cases per problem with xUnit
-**Easy to Extend** - Clear pattern for adding new problems
-**Professional Structure** - Organized by difficulty level
-**Quick Verification** - Run all tests or filter by problem/difficulty
-**Documentation** - XML comments with problem descriptions
-**Metadata-Driven** - Interface provides problem info at runtime
+- **Isolated Solutions** - Each problem in its own file for easy navigation
+- **Comprehensive Tests** - Multiple test cases per problem with xUnit
+- **Easy to Extend** - Clear pattern for adding new problems
+- **Professional Structure** - Organized by difficulty level
+- **Quick Verification** - Run all tests or filter by problem/difficulty
+- **Documentation** - XML comments with problem descriptions
+- **Metadata-Driven** - Interface provides problem info at runtime
 
 ## Technologies
 
