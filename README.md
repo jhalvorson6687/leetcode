@@ -204,10 +204,6 @@ This will:
 
 - **#49** - Group Anagrams
 
-### Hard (1 problems)
-
-- **#4** - Median of Two Sorted Arrays
-
 ## Key Features
 
 ### Clean Architecture
