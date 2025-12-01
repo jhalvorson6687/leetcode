@@ -7,42 +7,50 @@ A well-organized collection of LeetCode problem solutions with comprehensive uni
 This project serves multiple learning objectives:
 
 - **Algorithm Practice**: Solving LeetCode problems to improve problem-solving skills and prepare for technical interviews
-- **Design Patterns**: Implementing real-world design patterns (Command, Strategy, Factory, Service Layer) in a practical context
+- **Data Structures & Algorithms**: Building fundamental data structures and algorithms from scratch to deepen understanding
+- **Design Patterns**: Implementing real-world design patterns (Command Pattern, Dependency Injection, Service Layer) in a practical context
 - **Test-Driven Development**: Writing comprehensive unit tests using xUnit to ensure solution correctness
 - **Clean Architecture**: Organizing code with clear separation of concerns and maintainable structure
 - **Developer Tooling**: Building CLI tools and automation to streamline the development workflow
 
-The project goes beyond simple problem-solving by creating a well-architected system with automated scaffolding, reflection-based discovery, and command-line utilities.
+The project goes beyond simple problem-solving by creating a well-architected system with custom data structure implementations, automated scaffolding, reflection-based discovery, and command-line utilities.
 
 ## Project Structure
 
 ```
 CSharp_leetcode/
 ├── Commands/               # Command pattern implementations
-│   ├── ICommand.cs         # Command interface
-│   ├── HelpCommand.cs               # Default: show usage instructions
-│   ├── ListProblemsCommand.cs       # --list-problems: list all problems
-│   ├── UpdateReadmeCommand.cs       # --update-readme
-│   └── GenerateTemplateCommand.cs   # --new
+│   ├── ICommand.cs
+│   ├── HelpCommand.cs
+│   ├── ListProblemsCommand.cs
+│   ├── UpdateReadmeCommand.cs
+│   └── GenerateTemplateCommand.cs
 ├── Services/               # Reusable business logic
-│   ├── ProblemDiscovery.cs          # Reflection-based problem discovery
-│   └── TemplateGenerator.cs         # Code generation for new problems
-├── Problems/
-│   ├── ILeetCodeProblem.cs # Interface with problem metadata
-│   ├── Easy/               # Easy difficulty problems
-│   │   ├── TwoSum.cs
-│   │   ├── MajorityElement.cs
-│   │   └── ...
-│   ├── Medium/             # Medium difficulty problems
-│   └── Hard/               # Hard difficulty problems
-├── Tests/
-│   ├── Easy/               # Test files for easy problems
-│   │   ├── TwoSumTests.cs
-│   │   ├── MajorityElementTests.cs
-│   │   └── ...
+│   ├── ProblemDiscovery.cs
+│   └── TemplateGenerator.cs
+├── Problems/               # LeetCode problem solutions
+│   ├── ILeetCodeProblem.cs
+│   ├── Easy/
 │   ├── Medium/
 │   └── Hard/
-├── Program.cs              # Entry point & command routing
+├── DataStructures/         # Custom implementations from scratch
+│   ├── Array/
+│   ├── LinkedList/
+│   ├── Stack/
+│   ├── Queue/
+│   ├── BinaryTree/
+│   ├── Heap/
+│   ├── Graph/
+│   └── HashTable/
+├── Algorithms/             # Core algorithm implementations
+│   ├── Sorting/
+│   ├── Searching/
+│   └── GraphTraversal/
+├── Tests/                  # xUnit test files
+│   ├── Easy/
+│   ├── Medium/
+│   └── Hard/
+├── Program.cs
 └── leetcode.csproj
 ```
 
