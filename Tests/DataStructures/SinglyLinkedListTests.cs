@@ -28,6 +28,7 @@ public class SinglyLinkedListTests
         // Assert
         Assert.NotNull(list.Head);
         Assert.Equal(10, list.Head.Data);
+        Assert.Null(list.Head.Next);
         Assert.Equal(1, list.Count);
     }
 

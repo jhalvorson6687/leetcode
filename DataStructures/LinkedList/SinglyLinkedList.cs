@@ -32,8 +32,12 @@ public class SinglyLinkedList<T>
     /// </summary>
     public void InsertAtHead(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        var newNode = new SinglyLinkedListNode<T>(data)
+        {
+            Next = Head
+        };
+        Head = newNode;
+        Count++;
     }
 
     /// <summary>
