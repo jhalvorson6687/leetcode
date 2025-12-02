@@ -46,8 +46,21 @@ public class SinglyLinkedList<T>
     /// </summary>
     public void InsertAtTail(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        var newNode = new SinglyLinkedListNode<T>(data);
+        if (Head == null)
+        {
+            Head = newNode;
+        }
+        else
+        {
+            var current = Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next = newNode;
+        }
+        Count++;
     }
 
     /// <summary>
