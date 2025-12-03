@@ -69,8 +69,26 @@ public class SinglyLinkedList<T>
     /// </summary>
     public void InsertAtPosition(T data, int position)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        if (position < 0 || position > Count)
+            throw new ArgumentOutOfRangeException(nameof(position));
+
+        var newNode = new SinglyLinkedListNode<T>(data);
+
+        if (position == 0) 
+        {
+            newNode.Next = Head;
+            Head = newNode;
+        }
+        else
+        {
+            var current = Head;
+            for(var i = 0; i < position; i++)
+            {
+                current = current!.Next;
+            }
+            
+        }
+
     }
 
     /// <summary>
