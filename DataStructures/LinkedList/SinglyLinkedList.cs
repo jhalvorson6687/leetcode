@@ -82,13 +82,14 @@ public class SinglyLinkedList<T>
         else
         {
             var current = Head;
-            for(var i = 0; i < position; i++)
+            for (int i = 0; i < position - 1; i++)
             {
                 current = current!.Next;
             }
-            
+            newNode.Next = current!.Next;
+            current.Next = newNode;
         }
-
+        Count++;
     }
 
     /// <summary>
