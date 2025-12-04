@@ -17,8 +17,6 @@ public class ProblemDiscovery
                         && !t.IsAbstract
                         && t.GetConstructor(Type.EmptyTypes) != null);
         
-        return problemTypes
-            .Select(t => (ILeetCodeProblem)Activator.CreateInstance(t)!)
-            .ToList();
+        return [.. problemTypes.Select(t => (ILeetCodeProblem)Activator.CreateInstance(t)!)];
     }
 }

@@ -61,7 +61,7 @@ public class TemplateGenerator
         Console.WriteLine("4. Update README: dotnet run -- --update-readme");
     }
 
-    private string GenerateProblemClass(string className, string difficulty, string problemNumber, string title, Difficulty difficultyEnum)
+    private static string GenerateProblemClass(string className, string difficulty, string problemNumber, string title, Difficulty difficultyEnum)
     {
         return $@"namespace CSharp_leetcode.Problems.{difficulty};
 
@@ -85,7 +85,7 @@ public class {className} : ILeetCodeProblem
 ";
     }
 
-    private string GenerateTestClass(string className, string difficulty)
+    private static string GenerateTestClass(string className, string difficulty)
     {
         return $@"using CSharp_leetcode.Problems.{difficulty};
 using Xunit;
