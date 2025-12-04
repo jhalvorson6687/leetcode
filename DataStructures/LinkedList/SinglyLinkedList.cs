@@ -182,8 +182,15 @@ public class SinglyLinkedList<T>
     /// </summary>
     public T GetAt(int position)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        if (position < 0 || position >= Count)
+            throw new ArgumentOutOfRangeException(nameof(position));
+
+        var current = Head;
+        for (int i = 0; i < position; i++)
+        {
+            current = current!.Next;
+        }
+        return current!.Data;
     }
 
     /// <summary>
@@ -202,8 +209,16 @@ public class SinglyLinkedList<T>
     /// </summary>
     public T[] ToArray()
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        T[] arr = new T[Count];
+
+        var current = Head;
+        for (var i = 0; i < Count; i++)
+        {
+            arr[i] = current!.Data;
+            current = current!.Next;
+        }
+
+        return arr;
     }
 
     /// <summary>
