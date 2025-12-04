@@ -98,8 +98,23 @@ public class SinglyLinkedList<T>
     /// </summary>
     public bool Delete(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        if (Head == null) return false;
+        
+        if (Equals(Head.Data, data))
+        {
+            Head = Head.Next;
+            Count--;
+            return true;
+        }
+        var current = Head;
+        while (current.Next != null && !Equals(current.Next.Data, data))
+        {
+            current = current.Next;
+        }
+        if (current.Next == null) return false;
+        current.Next = current.Next.Next;
+        Count--;
+        return true;
     }
 
     /// <summary>
@@ -108,8 +123,25 @@ public class SinglyLinkedList<T>
     /// </summary>
     public bool DeleteAtPosition(int position)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        if (position < 0 || position >= Count)
+            throw new ArgumentOutOfRangeException(nameof(position));
+
+        if (position == 0) 
+        {
+            Head = Head!.Next;
+            Count--;
+            return true;
+        }
+
+        var current = Head;
+        for (int i = 0; i < position - 1; i++)
+        {
+            current = current!.Next;
+        }
+
+        current!.Next = current.Next!.Next;
+        Count--;
+        return true;
     }
 
     /// <summary>
