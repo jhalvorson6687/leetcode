@@ -150,8 +150,12 @@ public class SinglyLinkedList<T>
     /// </summary>
     public bool Search(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        var current = Head;
+        while (current != null && !Equals(current!.Data, data))
+        {
+            current = current.Next;
+        }
+        return current != null;
     }
 
     /// <summary>
@@ -160,8 +164,16 @@ public class SinglyLinkedList<T>
     /// </summary>
     public void Reverse()
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        SinglyLinkedListNode<T>? prev = null;
+        var current = Head;
+        while (current != null)
+        {
+            var nextTemp = current.Next;
+            current.Next = prev;
+            prev = current;
+            current = nextTemp;
+        }
+        Head = prev;
     }
 
     /// <summary>
