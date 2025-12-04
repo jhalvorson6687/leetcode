@@ -17,13 +17,9 @@ public class MajorityElement : ILeetCodeProblem
         var dict = new Dictionary<int, int>();
         foreach (var item in nums)
         {
-            if (dict.ContainsKey(item))
+            if (!dict.TryAdd(item, 1))
             {
                 dict[item] += 1;
-            }
-            else
-            {
-                dict.Add(item, 1);
             }
         }
 
