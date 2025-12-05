@@ -35,8 +35,19 @@ public class DoublyLinkedList<T>
     /// </summary>
     public void InsertAtHead(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        var newNode = new DoublyLinkedListNode<T>(data);
+        if (Head == null) 
+        {
+            Head = newNode;
+            Tail = newNode;
+        }
+        else 
+        {
+            Head.Previous = newNode;
+            newNode.Next = Head;
+            Head = newNode;
+        }
+        Count++;
     }
 
     /// <summary>
@@ -45,8 +56,19 @@ public class DoublyLinkedList<T>
     /// </summary>
     public void InsertAtTail(T data)
     {
-        // TODO: Implement
-        throw new NotImplementedException();
+        var newNode = new DoublyLinkedListNode<T>(data);
+        if (Tail == null) 
+        {
+            Head = newNode;
+            Tail = newNode;
+        }
+        else 
+        {
+            Tail.Next = newNode;
+            newNode.Previous = Tail;
+            Tail = newNode;
+        }
+        Count++;
     }
 
     /// <summary>
