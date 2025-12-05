@@ -197,10 +197,11 @@ This will:
 
 ## Current Solutions
 
-### Easy (9 problems)
+### Easy (10 problems)
 
 - **#1** - Two Sum
 - **#9** - Palindrome Number
+- **#35** - Search Insert Position
 - **#121** - Best Time to Buy and Sell Stock
 - **#169** - Majority Element
 - **#202** - Happy Number
