@@ -50,4 +50,43 @@ public class IsPalindromeNumberTests
         // Assert
         Assert.False(result);
     }
+
+    [Fact]
+    public void Test_Example1_Solve2()
+    {
+        // Arrange
+        int x = 121;
+
+        // Act
+        var result = _solution.Solve2(x);
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void Test_Example2_Solve2()
+    {
+        // Arrange
+        int x = -121;
+
+        // Act
+        var result = _solution.Solve2(x);
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void Test_Example3_Solve2()
+    {
+        // Arrange
+        int x = 10;
+
+        // Act
+        var result = _solution.Solve2(x);
+
+        // Assert
+        Assert.False(result);
+    }
 }

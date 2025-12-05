@@ -25,4 +25,18 @@ public class IsPalindromeNumber : ILeetCodeProblem
         }
         return true;
     }
+
+    // Follow up question: solve without converting to string
+    public bool Solve2(int x)
+    {
+        var reverse = 0;
+        var temp = x;
+        while (x > 0)
+        {
+            reverse = (reverse * 10) + (x % 10);
+            x /= 10;
+        }
+
+        return reverse == temp;
+    }
 }
