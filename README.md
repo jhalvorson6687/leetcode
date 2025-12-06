@@ -197,7 +197,7 @@ This will:
 
 ## Current Solutions
 
-### Easy (10 problems)
+### Easy (11 problems)
 
 - **#1** - Two Sum
 - **#9** - Palindrome Number
@@ -206,6 +206,7 @@ This will:
 - **#169** - Majority Element
 - **#202** - Happy Number
 - **#219** - Contains Nearby Duplicate II
+- **#228** - Summary Ranges
 - **#242** - Valid Anagram
 - **#290** - Word Pattern
 - **#1018** - Binary Prefix Divisible By 5
