@@ -197,7 +197,7 @@ This will:
 
 ## Current Solutions
 
-### Easy (11 problems)
+### Easy (12 problems)
 
 - **#1** - Two Sum
 - **#9** - Palindrome Number
@@ -209,6 +209,7 @@ This will:
 - **#228** - Summary Ranges
 - **#242** - Valid Anagram
 - **#290** - Word Pattern
+- **#455** - Assign Cookies
 - **#1018** - Binary Prefix Divisible By 5
 
 ### Medium (1 problems)
